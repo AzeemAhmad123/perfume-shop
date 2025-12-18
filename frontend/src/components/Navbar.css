@@ -1,0 +1,268 @@
+.navbar {
+  background: #2c2c2c;
+  color: white;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.logo-image {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: white;
+  padding: 4px;
+  display: block;
+}
+
+.bottle-stand {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bottle {
+  width: 8px;
+  background: #2c3e50;
+  border-radius: 2px 2px 0 0;
+  position: absolute;
+}
+
+.bottle-1 {
+  height: 20px;
+  left: 8px;
+  bottom: 0;
+}
+
+.bottle-2 {
+  height: 24px;
+  left: 16px;
+  bottom: 2px;
+}
+
+.bottle-3 {
+  height: 18px;
+  left: 24px;
+  bottom: 0;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.navbar-links a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.user-name {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.btn-logout {
+  background: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #c0392b;
+}
+
+.search-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.search-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease;
+  position: relative;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.search-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-modal-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.search-close-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.search-close-btn:hover {
+  background: #f0f0f0;
+  color: #2c3e50;
+}
+
+.search-modal-form {
+  display: flex;
+  gap: 12px;
+}
+
+.search-modal-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-modal-input:focus {
+  border-color: #3498db;
+}
+
+.search-modal-submit {
+  padding: 14px 30px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-modal-submit:hover {
+  background: #34495e;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .search-modal {
+    width: 95%;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .search-modal-form {
+    flex-direction: column;
+  }
+
+  .search-modal-submit {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,47 @@
+================================================================================
+                    STRIPE API KEYS - ADD YOUR KEYS HERE
+================================================================================
+
+STEP 1: Get your Stripe API keys from:
+https://dashboard.stripe.com/apikeys
+
+STEP 2: Create backend/.env file and add:
+----------------------------------------
+MONGO_URI=mongodb://localhost:27017/gabbot
+PORT=5000
+
+STRIPE_SECRET_KEY=sk_test_YOUR_SECRET_KEY_HERE
+----------------------------------------
+
+STEP 3: Create frontend/.env file and add:
+----------------------------------------
+REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_YOUR_PUBLISHABLE_KEY_HERE
+REACT_APP_API_URL=http://localhost:5000
+----------------------------------------
+
+STEP 4: Restart your servers
+Run: .\start.bat
+
+================================================================================
+                              TEST CARD NUMBERS
+================================================================================
+
+Successful Payment:
+  Card: 4242 4242 4242 4242
+  Expiry: 12/34
+  CVC: 123
+  ZIP: 12345
+
+Declined Payment:
+  Card: 4000 0000 0000 0002
+  Expiry: 12/34
+  CVC: 123
+  ZIP: 12345
+
+================================================================================
+
+✅ Everything is set up and ready!
+✅ Just add your API keys and restart the servers
+✅ Read STRIPE_SETUP_GUIDE.md for detailed instructions
+
+================================================================================

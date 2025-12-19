@@ -1,0 +1,71 @@
+================================================================================
+                    VERCEL ENVIRONMENT VARIABLES
+================================================================================
+
+Copy these to Vercel Dashboard → Settings → Environment Variables
+
+================================================================================
+                         REQUIRED VARIABLES
+================================================================================
+
+1. MONGO_URI
+   Value: mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/perfume-shop
+   Environment: Production
+   Description: MongoDB Atlas connection string
+
+2. STRIPE_SECRET_KEY
+   Value: sk_live_YOUR_SECRET_KEY_FROM_CLIENT
+   Environment: Production
+   Description: Stripe secret key (LIVE - real money)
+
+3. REACT_APP_STRIPE_PUBLISHABLE_KEY
+   Value: pk_live_51SfUc7QLurqFqx09iPyEBFxUAOYYrJLEixjWcOekEaq1FhfFitj50MhGgSVdhBsVVdhRowOqf3dUPH0TImaI87Gj00V1UN1w6G
+   Environment: Production
+   Description: Stripe publishable key (already set)
+
+4. REACT_APP_API_URL
+   Value: /api
+   Environment: Production
+   Description: API base URL for Vercel
+
+================================================================================
+                         OPTIONAL VARIABLES
+================================================================================
+
+5. STRIPE_WEBHOOK_SECRET
+   Value: whsec_your_webhook_secret_here
+   Environment: Production
+   Description: For Stripe webhook verification (optional)
+
+================================================================================
+                         HOW TO ADD IN VERCEL
+================================================================================
+
+1. Go to: https://vercel.com/dashboard
+2. Select your project
+3. Click "Settings" tab
+4. Click "Environment Variables" in sidebar
+5. For each variable:
+   - Enter the Name (e.g., MONGO_URI)
+   - Enter the Value
+   - Select "Production" environment
+   - Click "Add"
+6. After adding all variables, click "Redeploy" in Deployments tab
+
+================================================================================
+                         WHAT YOU NEED TO GET
+================================================================================
+
+✅ Stripe Publishable Key - Already have it!
+❌ Stripe Secret Key - Ask client for this
+❌ MongoDB Connection String - Create free MongoDB Atlas account
+
+================================================================================
+                         QUICK LINKS
+================================================================================
+
+MongoDB Atlas: https://cloud.mongodb.com
+Vercel Dashboard: https://vercel.com/dashboard
+Stripe Dashboard: https://dashboard.stripe.com
+
+================================================================================

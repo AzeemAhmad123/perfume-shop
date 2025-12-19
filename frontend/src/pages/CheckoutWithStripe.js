@@ -7,7 +7,10 @@ import StripeCheckoutForm from '../components/StripeCheckoutForm';
 import './Checkout.css';
 
 // Initialize Stripe with your publishable key
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || '');
+const stripePromise = loadStripe(
+  process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || 
+  'pk_live_51SfUc7QLurqFqx09iPyEBFxUAOYYrJLEixjWcOekEaq1FhfFitj50MhGgSVdhBsVVdhRowOqf3dUPH0TImaI87Gj00V1UN1w6G'
+);
 
 const CheckoutWithStripe = () => {
   const [cartItems, setCartItems] = useState([]);

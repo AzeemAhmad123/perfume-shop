@@ -19,6 +19,7 @@ app.use('/api/auth', require('../backend/routes/authRoutes'));
 app.use('/api/cart', require('../backend/routes/cartRoutes'));
 app.use('/api/orders', require('../backend/routes/orderRoutes'));
 app.use('/api/users', require('../backend/routes/userRoutes'));
+app.use('/api/payment', require('../backend/routes/paymentRoutes'));
 
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/gabbot';
